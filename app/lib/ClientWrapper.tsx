@@ -15,13 +15,15 @@ const SchematicWrapped: React.FC<{ children: React.ReactNode }> = ({
   const { identify } = useSchematicEvents();
 
   useEffect(() => {
-    identify({
-      company: {
-        keys: { id: 'demo-company'},
-      },
-      keys: { id: 'demo-user' },
-    });
-    console.log("identified");
+    setTimeout(() => {
+      identify({
+        company: {
+          keys: { id: 'demo-company'},
+        },
+        keys: { id: 'demo-user' },
+        });
+        console.log("identified");
+    }, 0);
   }, [identify]);
 
   return children;
