@@ -51,4 +51,8 @@ body {
   .card {
     @apply bg-white rounded-xl shadow-md p-6;
   }
+
+  a {
+    @apply text-blue-500 font-semibold underline;
+  }
 } 
