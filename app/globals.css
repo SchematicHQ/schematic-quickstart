@@ -55,4 +55,8 @@ body {
   a {
     @apply text-blue-500 font-semibold underline;
   }
+
+  h3 {
+    @apply mb-4 font-semibold text-gray-600;
+  }
 } 
