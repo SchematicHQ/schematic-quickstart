@@ -5,24 +5,31 @@ import { useSchematicEntitlement, useSchematicEvents } from '@schematichq/schema
 
 export default function EventsPage() {  
   const {
-    value: isFeatureEnabled,
-    featureUsage,
-    featureAllocation,
-    featureUsageExceeded,
+    value: isDemoFeatureEnabled,
+    featureUsage: demoFeatureUsage,
+    featureAllocation: demoFeatureAllocation,
+    featureUsageExceeded: demoFeatureUsageExceeded,
   } = useSchematicEntitlement("demo-event-feature");
+
+  const {
+    value: isNewFeatureEnabled,
+    featureUsage: newFeatureUsage,
+    featureAllocation: newFeatuereAllocation,
+    featureUsageExceeded: newFeatureUsageExceeded,
+  } = useSchematicEntitlement("new-event-feature");
 
   const { track } = useSchematicEvents();
 
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Events</h1>
+      <h1 className="text-3xl font-bold mb-6 text-gray-800">Tracking Usage</h1>
       <p className="cardtext-gray-600 mb-8">Schematic has a fully featured event tracking system that can be used to implement many usage-based billing plans. The button below will track each time it is clicked, and we'll display the current usage and allocation to the right of the button (once configured).</p>
 
-      <div className="card">
+      <div className="card space-y-8">
         <div className="flex flex-row items-center gap-4">
           <button 
             className="btn-primary"
-            disabled={!isFeatureEnabled}
+            disabled={!isDemoFeatureEnabled}
             onClick={() => {
               track({ event: 'demo-event-feature-clicked' });
               
@@ -35,7 +42,7 @@ export default function EventsPage() {
               }
             }}
           >
-            {featureUsageExceeded ? 'No more clicks allowed!' : 'Track Clicks!'}
+            {demoFeatureUsageExceeded ? 'No more clicks allowed!' : 'Track Clicks!'}
           </button>
           <div 
             id="message"
@@ -44,15 +51,53 @@ export default function EventsPage() {
             Clicked!
           </div>
           <div className="text-gray-700 font-mono">
-            {featureUsage !== undefined && featureAllocation !== undefined 
-              ? `${featureUsage} / ${featureAllocation}`
+            {demoFeatureUsage !== undefined && demoFeatureAllocation !== undefined 
+              ? `${demoFeatureUsage} / ${demoFeatureAllocation}`
+              : 'Tracking not Configured'}
+          </div>
+        </div>
+
+        <div className="flex flex-row items-center gap-4">
+          <button 
+            className="btn-primary"
+            disabled={!isNewFeatureEnabled}
+            onClick={() => {
+              track({ event: 'demo-event-feature-clicked' });
+              
+              const messageDiv = document.getElementById('message2');
+              if (messageDiv) {
+                messageDiv.style.opacity = '1';
+                setTimeout(() => {
+                  messageDiv.style.opacity = '0';
+                }, 2000);
+              }
+            }}
+          >
+            {newFeatureUsageExceeded ? 'No more clicks allowed!' : 'Track Clicks!'}
+          </button>
+          <div 
+            id="message2"
+            className="transition-opacity duration-1000 opacity-0 text-green-600"
+          >
+            Clicked!
+          </div>
+          <div className="text-gray-700 font-mono">
+            {newFeatureUsage !== undefined && newFeatuereAllocation !== undefined 
+              ? `${newFeatureUsage} / ${newFeatuereAllocation}`
               : 'Tracking not Configured'}
           </div>
         </div>
       </div>
 
+      <div>
+        <h3>Enabling the second button</h3>
+        <div className="text-gray-600">
+          We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/tracking-usage">in our docs</a>.
+        </div>
+      </div>
+
       <div className="card bg-gray-50">
-        <p className="text-gray-700 font-medium mb-4">The code for the button above looks like:</p>
+        <h3>The code for the button above looks like:</h3>
         <pre className="bg-gray-800 text-gray-200 p-4 rounded-lg overflow-x-auto">
 {`const {
   value: isFeatureEnabled,
@@ -62,7 +107,6 @@ export default function EventsPage() {
 } = useSchematicEntitlement("demo-event-feature");
 
 const { track } = useSchematicEvents();
-...
 
 <button 
   className="bg-blue-500 text-white px-4 py-2 rounded-md"

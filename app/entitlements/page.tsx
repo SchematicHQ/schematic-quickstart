@@ -67,7 +67,7 @@ export default function EntitlementsPage() {
         </div>
       </div>
 
-      <div className="">
+      <div>
         <h3>Enabling the second button</h3>
         <div className="text-gray-600">
           We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/entitling-a-feature">in our docs</a>.
@@ -80,8 +80,6 @@ export default function EntitlementsPage() {
 {`const {
   value: isDemoBooleanFeatureEnabled,
 } = useSchematicEntitlement("demo-boolean-feature");
-
-...
 
 <button 
   className="bg-blue-500 text-white px-4 py-2 rounded-md"
