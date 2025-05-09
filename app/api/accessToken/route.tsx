@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { SchematicClienta } from "@schematichq/schematic-typescript-node";
+import { SchematicClient } from "@schematichq/schematic-typescript-node";
 
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 export async function GET(_request: NextRequest) {
