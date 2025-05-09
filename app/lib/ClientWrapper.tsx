@@ -4,10 +4,7 @@ import React, { useEffect, useState } from "react";
 import {
   SchematicProvider,
   useSchematicEvents,
-  useSchematicIsPending,
 } from "@schematichq/schematic-react";
-import { ClerkProvider } from "@clerk/nextjs";
-import Loader from "@/app/lib/Loader";
 
 const SchematicWrapped: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -18,7 +15,7 @@ const SchematicWrapped: React.FC<{ children: React.ReactNode }> = ({
     setTimeout(() => {
       identify({
         company: {
-          keys: { id: 'demo-company'},
+          keys: { id: 'demo-company' },
         },
         keys: { id: 'demo-user' },
         });

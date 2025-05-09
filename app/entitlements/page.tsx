@@ -14,7 +14,7 @@ export default function EntitlementsPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Entitlements</h1>
+      <h1>Entitlements</h1>
       <p className="text-gray-600 mb-8">Entitlements is a fancy word for "the company plan allows them to do this". In Schematic, features are <em>entitled</em> to plans. This first feature (button) is entitled to your plan. The second feature (button) is not.</p>
 
       <div className="card space-y-8">
