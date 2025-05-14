@@ -1,7 +1,10 @@
 "use client";
 import React from 'react';
 
-import { useSchematicEntitlement, useSchematicEvents } from '@schematichq/schematic-react';
+import { 
+  useSchematicEntitlement, 
+  useSchematicEvents 
+} from '@schematichq/schematic-react';
 
 export default function EventsPage() {  
   const {
@@ -14,17 +17,21 @@ export default function EventsPage() {
   const {
     value: isNewFeatureEnabled,
     featureUsage: newFeatureUsage,
-    featureAllocation: newFeatuereAllocation,
+    featureAllocation: newFeatureAllocation,
     featureUsageExceeded: newFeatureUsageExceeded,
   } = useSchematicEntitlement("new-event-feature");
+
 
   const { track } = useSchematicEvents();
 
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
       <h1>Tracking Usage</h1>
-      <p className="cardtext-gray-600 mb-8">Schematic has a fully featured event tracking system that can be used to implement many usage-based billing plans. The button below will track each time it is clicked, and we'll display the current usage and allocation to the right of the button (once configured).</p>
-
+      {isNewFeatureEnabled ? "true" : "false"}
+      <p className="mb-8">
+        Schematic has a fully featured event tracking system that can be used to implement many usage-based billing plans. The button below will track each time it is clicked, and we'll display the current usage and allocation to the right of the button (once configured)
+      </p>
+      
       <div className="card space-y-8">
         <div className="flex flex-row items-center gap-4">
           <button 
@@ -62,7 +69,7 @@ export default function EventsPage() {
             className="btn-primary"
             disabled={!isNewFeatureEnabled}
             onClick={() => {
-              track({ event: 'demo-event-feature-clicked' });
+              track({ event: 'new-event-feature-clicked' });
               
               const messageDiv = document.getElementById('message2');
               if (messageDiv) {
@@ -82,8 +89,8 @@ export default function EventsPage() {
             Clicked!
           </div>
           <div className="text-gray-700 font-mono">
-            {newFeatureUsage !== undefined && newFeatuereAllocation !== undefined 
-              ? `${newFeatureUsage} / ${newFeatuereAllocation}`
+            {newFeatureUsage !== undefined && newFeatureAllocation !== undefined 
+              ? `${newFeatureUsage} / ${newFeatureAllocation}`
               : 'Tracking not Configured'}
           </div>
         </div>
@@ -91,9 +98,9 @@ export default function EventsPage() {
 
       <div>
         <h3>Enabling the second button</h3>
-        <div className="text-gray-600">
+        <p>
           We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/tracking-usage">in our docs</a>.
-        </div>
+        </p>
       </div>
 
       <div className="card bg-gray-50">

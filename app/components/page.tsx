@@ -8,7 +8,7 @@ export default function ComponentsPage() {
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
       <h1>Components</h1>
-      <p className="text-gray-600 mb-2">
+      <p className="mb-2">
         Schematic provides a component builder to quickly deploy components to quickly solve many common billing scenarios, including: 
       </p>
       <ol className="list-decimal ml-4 text-gray-600">
@@ -24,16 +24,16 @@ export default function ComponentsPage() {
 
       <div>
         <h3>Creating this component</h3>
-        <div className="text-gray-600">
+        <p>
           We can quickly create components in Schematic. Here is <a href="https://docs.schematichq.com/quickstart/create-a-component">a quick walkthrough</a> of creating a Customer Portal.
-        </div>
+        </p>
       </div>
 
       <div>
         <h3>Component Documentation</h3>
-        <div className="text-gray-600">
+        <p>
           Schematic's component builder is feature rich and can support many use cases. See a full breakdown <a href="https://docs.schematichq.com/react/components">in our docs</a>.
-        </div>
+        </p>
       </div>
 
       <div className="card">

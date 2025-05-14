@@ -10,12 +10,12 @@ export default function EntitlementsPage() {
     value: isNewBooleanFeatureEnabled,
   } = useSchematicEntitlement("new-boolean-feature");
 
-  const isPending = useSchematicIsPending();
-
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
       <h1>Entitlements</h1>
-      <p className="text-gray-600 mb-8">Entitlements is a fancy word for "the company plan allows them to do this". In Schematic, features are <em>entitled</em> to plans. This first feature (button) is entitled to your plan. The second feature (button) is not.</p>
+      <p className="mb-8">
+        Entitlements is a fancy word for "the company plan allows them to do this". In Schematic, features are <em>entitled</em> to plans. This first feature (button) is entitled to your plan. The second feature (button) is not.
+      </p>
 
       <div className="card space-y-8">
         <div className="flex flex-row items-center gap-4">
@@ -69,9 +69,9 @@ export default function EntitlementsPage() {
 
       <div>
         <h3>Enabling the second button</h3>
-        <div className="text-gray-600">
+        <p>
           We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/entitling-a-feature">in our docs</a>.
-        </div>
+        </p>
       </div>
 
       <div className="card">

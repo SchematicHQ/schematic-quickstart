@@ -19,7 +19,6 @@ const SchematicWrapped: React.FC<{ children: React.ReactNode }> = ({
         },
         keys: { id: 'demo-user' },
         });
-        console.log("identified");
     }, 0);
   }, [identify]);
 
