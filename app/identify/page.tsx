@@ -10,7 +10,7 @@ export default function IdentifyPage() {
       </p>
 
       <p>
-        A thorough explanation of creating and identifying users can be found in <a href="https://docs.schematichq.com/developer_resources/identifying_users">in our docs</a>. These docs provide recommendations and best practices for managing your customers in Schematic. Additionally, an explanation of keys and how to best model them can be found <a href="https://docs.schematichq.com/developer_resources/key_management">here</a>
+        A thorough explanation of creating and identifying users can be found in <a href="https://docs.schematichq.com/developer_resources/identifying_users" target="_blank">in our docs</a>. These docs provide recommendations and best practices for managing your customers in Schematic. Additionally, an explanation of keys and how to best model them can be found <a href="https://docs.schematichq.com/developer_resources/key_management" target="_blank">here</a>
       </p>
 
       <h2>Client Side Identification</h2>

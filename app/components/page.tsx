@@ -25,14 +25,14 @@ export default function ComponentsPage() {
       <div>
         <h3>Creating this component</h3>
         <p>
-          We can quickly create components in Schematic. Here is <a href="https://docs.schematichq.com/quickstart/create-a-component">a quick walkthrough</a> of creating a Customer Portal.
+          We can quickly create components in Schematic. Here is <a href="https://docs.schematichq.com/quickstart/create-a-component" target="_blank">a quick walkthrough</a> of creating a Customer Portal.
         </p>
       </div>
 
       <div>
         <h3>Component Documentation</h3>
         <p>
-          Schematic's component builder is feature rich and can support many use cases. See a full breakdown <a href="https://docs.schematichq.com/react/components">in our docs</a>.
+          Schematic's component builder is feature rich and can support many use cases. See a full breakdown <a href="https://docs.schematichq.com/react/components" target="_blank">in our docs</a>.
         </p>
       </div>
 

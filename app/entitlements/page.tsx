@@ -68,9 +68,18 @@ export default function EntitlementsPage() {
       </div>
 
       <div>
+        <h3>Usage</h3>
+        <p>
+          Usage Based Entitlements are becoming very popular, especially for AI models. Any time you want to allow a user a specific amount of usage per period, charge a specific amount per unit of usage, or both, a usage based entitlement is the best way to control this.  
+        </p>
+        <br />
+        <p>Common Examples include AI conversations, API calls, and Clerk's active user pricing.</p>
+      </div>
+
+      <div>
         <h3>Enabling the second button</h3>
         <p>
-          We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/entitling-a-feature">in our docs</a>.
+          We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/entitling-a-feature" target="_blank">in our docs</a>.
         </p>
       </div>
 

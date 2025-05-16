@@ -97,9 +97,18 @@ export default function EventsPage() {
       </div>
 
       <div>
+        <h3>Usage</h3>
+        <p>
+          Simple Entitlements are the most common way to control access to features. Anytime some plans have access to a feature, whereas other plans do not, a simple entitlement is the best way to control this. 
+        </p>
+        <br />
+        <p>Common Examples include SSO, custom domains, and access to specific AI models.</p>
+      </div>
+
+      <div>
         <h3>Enabling the second button</h3>
         <p>
-          We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/tracking-usage">in our docs</a>.
+          We can easily add an entitlement so that the second button is clickable as well. A quick walkthrough (with a video) can be found <a href="https://docs.schematichq.com/quickstart/tracking-usage" target="_blank">in our docs</a>.
         </p>
       </div>
 
