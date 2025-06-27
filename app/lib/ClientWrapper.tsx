@@ -15,9 +15,9 @@ const SchematicWrapped: React.FC<{ children: React.ReactNode }> = ({
     setTimeout(() => {
       identify({
         company: {
-          keys: { id: 'demo-company' },
+          keys: { 'demo-id': 'demo-company' },
         },
-        keys: { id: 'demo-user' },
+        keys: { 'demo-id': 'demo-user' },
         });
     }, 0);
   }, [identify]);
@@ -32,7 +32,7 @@ export default function ClientWrapper({
 }) {
   const schematicPubKey = process.env.NEXT_PUBLIC_SCHEMATIC_PUBLISHABLE_KEY;
   if (!schematicPubKey) {
-    throw new Error(
+    console.error(
       "No Schematic Publishable Key found. Please add it to your .env.local file.",
     );
   }

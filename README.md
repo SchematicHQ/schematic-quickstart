@@ -1,8 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Schematic React SDK Playground
+
+This is a quickstart playground to demonstrate [Schematic](https://www.schematichq.com/) and it's core features. This quickstart is built to sync with our [quickstart docs](https://docs.schematichq.com/quickstart/overview). To use this quickstart, you'll need a Schematic account ((signup for free)[https://app.schematichq.com/sign-up]).
+
+You can see a hosted and fully configured version [here](https://schematic-demo-hosted-schematichq.vercel.app/entitlements).
+
+## What's Inside
+
+Pre-built samples for the following core features:
+
+- Feature flags and feature gating
+- Event tracking
+- User and company identification flows
+- Drop-in components (e.g. customer portals and checkout flows)
+
+## Documentation
+
+For complete documentation on Schematic's React SDK, visit:
+- [Schematic Documentation](https://docs.schematichq.com/quickstart/overview)
+- [React SDK Reference](https://docs.schematichq.com/sdks/react)
 
 ## Getting Started
 
-First, run the development server:
+We suggest following the written docs [here](https://docs.schematichq.com/quickstart/overview).
+
+To run this quickstart app, you'll need to first signup for a Schematic account and [generate a Schematic Publishable Key](https://docs.schematichq.com/quickstart/account-setup). 
 
 ```bash
 npm run dev
@@ -14,11 +35,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Dev mode supports hot reloading, so any changes you make will be automatically rendered in your browser.
 
 ## Learn More
 
@@ -28,9 +45,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

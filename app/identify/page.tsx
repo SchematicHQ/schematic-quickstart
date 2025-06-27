@@ -24,9 +24,9 @@ export default function IdentifyPage() {
 {`useEffect(() => {
   identify({
     company: {
-      keys: { id: 'demo-company' },
+      keys: { 'demo-id': 'demo-company' },
     },
-    keys: { id: 'demo-user' },
+    keys: { 'demo-id': 'demo-user' },
     });
 }, [identify]);`}
         </pre>
@@ -41,7 +41,7 @@ export default function IdentifyPage() {
         <h3>A sample call creating a company in Python:</h3>
         <pre className="bg-gray-800 text-gray-200 p-4 rounded-lg overflow-x-auto">
 {`client.companies.upsert_company(
-    keys={"id": "demo-company"},
+    keys={"demo-id": "demo-company"},
     name="Acme Widgets, Inc.",
     traits={
         "city": "Atlanta",

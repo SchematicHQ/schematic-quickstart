@@ -14,7 +14,7 @@ export async function GET(_request: NextRequest) {
     const resp = await schematicClient.accesstokens.issueTemporaryAccessToken({
       resourceType: "company",
       lookup: {
-        id: 'demo-company',
+        'demo-id': 'demo-company',
       },
     });
 
