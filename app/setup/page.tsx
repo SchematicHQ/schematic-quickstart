@@ -8,13 +8,17 @@ export default function SetupPage() {
           <li>Create a file called <code>.env.local</code> in the root of this project. Copy the contents of <code>.env.sample</code> into it.</li>
           <li>Next, we'll need to create a Schematic api key.
             <div className="mt-4 rounded-lg overflow-hidden">
-              <img src="https://prod.ferndocs.com/_next/image?url=https%3A%2F%2Ffiles.buildwithfern.com%2Fhttps%3A%2F%2Fschematic.docs.buildwithfern.com%2F2025-04-16T20%3A18%3A05.794Z%2Fdocs%2Fpages%2Fget_started%2Fimages%2Fapi-key.png&w=3840&q=75" alt="API Key instructions" className="w-full" />
+              <img src="https://prod.ferndocs.com/_next/image?url=https%3A%2F%2Ffiles.buildwithfern.com%2Fhttps%3A%2F%2Fschematic.docs.buildwithfern.com%2F2025-04-16T20%3A18%3A05.794Z%2Fdocs%2Fpages%2Fget_started%2Fimages%2Fapi-key.png&w=3840&q=75" 
+                alt="API Key instructions" 
+                className="w-full" />
             </div>
           </li>
           <li>Add your Schematic publishable key and secret key to the `.env.local` file. (We'll add the component id later)</li>
           <li>On the Schematic Quickstart page, click the "Generate Sample Data" button. This will create a demo customer, plan, and a few features.
             <div className="mt-4 rounded-lg overflow-hidden">
-              <img src="https://prod.ferndocs.com/_next/image?url=https%3A%2F%2Ffiles.buildwithfern.com%2Fhttps%3A%2F%2Fschematic.docs.buildwithfern.com%2F2025-04-16T20%3A18%3A05.794Z%2Fdocs%2Fpages%2Fget_started%2Fimages%2Fapi-key.png&w=3840&q=75" alt="API Key instructions" className="w-full" />
+              <img src="https://docs.schematichq.com/_files/https://schematic.docs.buildwithfern.com/2025-06-27T15:17:50.043Z/docs/assets/images/quickstart/quickstart-account-setup-sample-data.png" 
+              alt="Generate Sample Data" 
+              className="w-full" />
             </div>
           </li>
         </ol>
