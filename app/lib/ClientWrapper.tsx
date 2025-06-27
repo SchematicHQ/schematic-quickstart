@@ -30,11 +30,12 @@ export default function ClientWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const schematicPubKey = process.env.NEXT_PUBLIC_SCHEMATIC_PUBLISHABLE_KEY;
+  let schematicPubKey = process.env.NEXT_PUBLIC_SCHEMATIC_PUBLISHABLE_KEY;
   if (!schematicPubKey) {
     console.error(
       "No Schematic Publishable Key found. Please add it to your .env.local file.",
     );
+    schematicPubKey = "";
   }
 
   const [isClientSide, setIsClientSide] = useState(false);
