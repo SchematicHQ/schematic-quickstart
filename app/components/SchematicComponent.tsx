@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SchematicEmbed } from "@schematichq/schematic-components";
+import { SchematicEmbed, EmbedProvider } from "@schematichq/schematic-components";
 
 import Loader from "@/app/lib/Loader";
 
@@ -51,9 +51,8 @@ export default function UsageAndPlan({
   }
 
   return (
-    <SchematicEmbed
-      accessToken={accessToken}
-      id={componentId}
-    />
+    <EmbedProvider debug>
+      <SchematicEmbed accessToken={accessToken} id={componentId} />
+    </EmbedProvider>
   );
 }
