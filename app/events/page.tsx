@@ -27,7 +27,6 @@ export default function EventsPage() {
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
       <h1>Tracking Usage</h1>
-      {isNewFeatureEnabled ? "true" : "false"}
       <p className="mb-8">
         Schematic has a fully featured event tracking system that can be used to implement many usage-based billing plans. The button below will track each time it is clicked, and we'll display the current usage and allocation to the right of the button (once configured)
       </p>
