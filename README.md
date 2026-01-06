@@ -1,6 +1,6 @@
 # Schematic React SDK Playground
 
-This is a quickstart playground to demonstrate [Schematic](https://www.schematichq.com/) and it's core features. This quickstart is built to sync with our [quickstart docs](https://docs.schematichq.com/quickstart/overview). To use this quickstart, you'll need a Schematic account ((signup for free)[https://app.schematichq.com/sign-up]).
+This is a quickstart playground to demonstrate [Schematic](https://www.schematichq.com/) and it's core features. This quickstart is built to sync with our [quickstart docs](https://docs.schematichq.com/quickstart/overview). To use this quickstart, you'll need a Schematic account ([signup for free](https://app.schematichq.com/sign-up)).
 
 You can see a hosted and fully configured version [here](https://schematic-demo-hosted-schematichq.vercel.app/entitlements).
 
